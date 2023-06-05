@@ -11,7 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic_03_XPath_Part_I {
+public class Topic_03_XPath_And_CSS {
 	
 	/**
 	 *  Todo: https://docs.google.com/document/d/1UaYIlYZMJib3ThkE2KaEhn9J2saOc5kSIhRYrGyNZwo/edit#
