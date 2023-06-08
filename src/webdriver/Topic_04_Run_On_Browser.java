@@ -43,7 +43,7 @@ public class Topic_04_Run_On_Browser {
 	}
 	
 	@Test
-	public void TC_02_Run_Edge() {
+	public void TC_03_Run_Edge() {
 		if (osName.contains("Windows")) {
 			System.setProperty("webdriver.edge.driver", projectPath + "\\browserDrivers\\msedgedriver.exe");
 		} else {
