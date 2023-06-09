@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -56,8 +57,12 @@ public class Topic_07_Textbox_TextArea_2 {
 		
 		driver.findElement(By.name("firstName")).sendKeys("Automation");
 		driver.findElement(By.name("lastName")).sendKeys("FC");
-		driver.findElement(By.xpath("//label[text()='Employee Id']/parent::div/following-sibling::div/input")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
-		driver.findElement(By.xpath("//label[text()='Employee Id']/parent::div/following-sibling::div/input")).sendKeys(employeeID);
+		
+		WebElement employeeIDTextbox = driver.findElement(By.xpath("//label[text()='Employee Id']/parent::div/following-sibling::div/input"));
+		employeeIDTextbox.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		employeeIDTextbox.sendKeys(Keys.DELETE);
+		employeeIDTextbox.sendKeys(employeeID);
+		
 		driver.findElement(By.xpath("//p[text()='Create Login Details']/parent::div//span")).click();
 		sleepInSecond(3);
 		
@@ -76,7 +81,7 @@ public class Topic_07_Textbox_TextArea_2 {
 		
 		driver.findElement(By.xpath("//h6[text()='Assigned Immigration Records']/following-sibling::button")).click();
 		driver.findElement(By.xpath("//label[text()='Number']/parent::div/following-sibling::div/input")).sendKeys(passportNumber);
-		driver.findElement(By.xpath("//label[text()='Comments']/parent::div/following-sibling::div/input")).sendKeys(comment);
+		driver.findElement(By.xpath("//label[text()='Comments']/parent::div/following-sibling::div/textarea")).sendKeys(comment);
 		driver.findElement(By.xpath("//button[contains(string(),'Save')]")).click();
 		sleepInSecond(6);
 		
@@ -84,7 +89,7 @@ public class Topic_07_Textbox_TextArea_2 {
 		sleepInSecond(3);
 		
 		Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Number']/parent::div/following-sibling::div/input")).getAttribute("value"), passportNumber);
-		Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Comments']/parent::div/following-sibling::div/input")).getAttribute("value"), comment);
+		Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Comments']/parent::div/following-sibling::div/textarea")).getAttribute("value"), comment);
 		
 		driver.findElement(By.cssSelector("p.oxd-userdropdown-name")).click();
 		driver.findElement(By.xpath("//a[text()='Logout']")).click();
@@ -94,6 +99,19 @@ public class Topic_07_Textbox_TextArea_2 {
 		driver.findElement(By.name("password")).sendKeys("Password123!!!");
 		driver.findElement(By.cssSelector("button.orangehrm-login-button")).click();
 		sleepInSecond(5);
+		
+		Assert.assertEquals(driver.findElement(By.name("firstName")).getAttribute("value"), "Automation");
+		Assert.assertEquals(driver.findElement(By.name("lastName")).getAttribute("value"), "FC");
+		Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Employee Id']/parent::div/following-sibling::div/input")).getAttribute("value"), "employeeID");
+		
+		driver.findElement(By.xpath("//a[text()='Immigration']")).click();
+		sleepInSecond(5);
+		
+		driver.findElement(By.cssSelector("i.bi-pencil-fill")).click();
+		sleepInSecond(3);
+		
+		Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Number']/parent::div/following-sibling::div/input")).getAttribute("value"), passportNumber);
+		Assert.assertEquals(driver.findElement(By.xpath("//label[text()='Comments']/parent::div/following-sibling::div/textarea")).getAttribute("value"), comment);
 	
 	}
 
