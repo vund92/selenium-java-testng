@@ -3,7 +3,6 @@ package webdriver;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.grid.internal.exception.NewSessionException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

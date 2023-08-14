@@ -8,5 +8,28 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="libraries/testng-6.14.3.jar" sourcepath="libraries/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="lib" path="libraries/selenium-server-standalone-3.141.59.jar" sourcepath="libraries/client-combined-3.141.59-sources.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/bcpkix-jdk15on-1.64.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/bcprov-jdk15on-1.64.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/commons-compress-1.21.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/commons-lang3-3.12.0.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/dec-0.1.2.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/docker-java-3.3.0.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/docker-java-api-3.3.0.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/docker-java-core-3.3.0.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/docker-java-transport-3.3.0.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/docker-java-transport-httpclient5-3.3.0.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/gson-2.10.1.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/httpclient5-5.2.1.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/httpcore5-5.2.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/httpcore5-h2-5.2.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/jackson-annotations-2.10.3.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/jackson-core-2.10.3.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/jackson-databind-2.10.3.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/jcl-over-slf4j-1.7.30.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/jna-5.12.1.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/slf4j-api-2.0.7.jar"/>
+	<classpathentry kind="lib" path="libWebDriverManager/webdrivermanager-5.3.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
